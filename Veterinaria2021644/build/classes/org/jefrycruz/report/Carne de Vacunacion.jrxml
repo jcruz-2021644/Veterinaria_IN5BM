@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Carne de Vacunacion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b64ac3a-cee9-4cce-a1db-68720e5f630e">
+	<property name="ireport.zoom" value="5.559917313492285"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="781"/>
+	<queryString>
+		<![CDATA[call sp_CarneVacuancion();]]>
+	</queryString>
+	<field name="Nombre de la Vacuna" class="java.lang.String"/>
+	<field name="Fecha de Vacunacion" class="java.sql.Date"/>
+	<field name="Veterinario" class="java.lang.String"/>
+	<field name="Nombre de la mascota" class="java.lang.String"/>
+	<field name="Nombre del Dueño" class="java.lang.String"/>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="570" height="752" uuid="edbc6013-8f1d-414e-9657-ada1c8747235"/>
+				<imageExpression><![CDATA["C:\\Users\\PC\\Desktop\\Veterinaria2021644\\Veterinaria2021644\\src\\org\\jefrycruz\\image\\Hoja Membretada  .jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="242" y="0" width="123" height="20" uuid="eb35196b-8cbd-4663-9256-1257e329d173"/>
+				<textFieldExpression><![CDATA["Carne de Vacunacion"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="23" width="114" height="20" uuid="4a9e6d19-99df-44f2-88b0-a6cfb49c9d17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nombre de la Vacuna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="23" width="114" height="20" uuid="4a3bd45b-fe73-4762-b62d-4d24b67b879c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Fecha de Vacunacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="24" width="114" height="20" uuid="5f7031cb-21dd-4c39-91a4-1bff12b42a3c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Veterinario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="23" width="101" height="20" uuid="bbd008bf-58e4-4fcf-a104-b5fd0face0a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nombre de la mascota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="23" width="96" height="20" uuid="b0198410-70f6-4ce9-adb4-db3ed2bbd8fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nombre del Dueño]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="43" width="540" height="1" uuid="cb457b30-effd-4285-9cb2-4d9b34a441a3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="22" width="538" height="1" uuid="121be8ac-32aa-4693-a8af-9776afd7c0de"/>
+			</line>
+			<line>
+				<reportElement x="539" y="23" width="1" height="20" uuid="3547206a-3f83-42d8-a766-c57c69f77f52"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="22" width="1" height="21" uuid="03f72f96-32c2-42ba-a4f1-778b645850d0"/>
+			</line>
+			<line>
+				<reportElement x="443" y="23" width="1" height="20" uuid="26f90868-7970-4a1b-8468-6038ac20f4a3"/>
+			</line>
+			<line>
+				<reportElement x="341" y="23" width="1" height="20" uuid="caf3cb6a-f38f-44e9-9472-e0066f78239c"/>
+			</line>
+			<line>
+				<reportElement x="227" y="23" width="1" height="20" uuid="72f41dc5-eb89-48e8-b962-2f39ad9bc463"/>
+			</line>
+			<line>
+				<reportElement x="114" y="23" width="1" height="20" uuid="b4f97195-a8f0-48d7-8786-4c29c95de96b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="114" height="20" uuid="0d3b6dd0-4bfb-45d3-8b0a-f0a90b8a4a41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Nombre de la Vacuna}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="114" height="20" uuid="f19d7a6f-69bc-4063-b0d1-26255de5163e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Fecha de Vacunacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="114" height="20" uuid="c4e2b4b0-8fe2-4924-ba28-9112b1356d4e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Veterinario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="101" height="20" uuid="31b10d72-8306-4e74-9c04-5922f4154e03"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Nombre de la mascota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="0" width="96" height="20" uuid="b6a99ed0-f62e-4dc8-b79a-99dbab609c80"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Nombre del Dueño}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="19" width="539" height="1" uuid="4ea9772a-156a-4cdd-924c-01ba2a6da325"/>
+			</line>
+			<line>
+				<reportElement x="539" y="0" width="1" height="19" uuid="387ff0d4-d053-4db6-99d6-950a9d860bc3"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="0" width="1" height="20" uuid="e4ad7a0a-831a-4df7-8af0-123498dfe38f"/>
+			</line>
+			<line>
+				<reportElement x="443" y="-1" width="1" height="20" uuid="9d76aee4-5737-45da-8cd0-4b9c3ad6ab3f"/>
+			</line>
+			<line>
+				<reportElement x="341" y="-1" width="1" height="20" uuid="8dcb1205-b67c-445f-8354-fe1a69dc19b3"/>
+			</line>
+			<line>
+				<reportElement x="227" y="-1" width="1" height="20" uuid="096f6bd6-412d-4e4e-8363-8f3b1c6ce7a7"/>
+			</line>
+			<line>
+				<reportElement x="114" y="0" width="1" height="19" uuid="fe0e894a-7ea6-41f9-9b27-756a4bfd3380"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FacturaAtendida" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="88024474-384c-4bd1-adeb-af14613bf3b6">
+	<property name="ireport.zoom" value="1.4641000000000035"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codigoFactura" class="java.lang.String"/>
+	<parameter name="HojaMembretada" class="java.awt.Image">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_FacturaAtencion($P{codigoFactura});]]>
+	</queryString>
+	<field name="codigoFactura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Empleado" class="java.lang.String"/>
+	<field name="Cliente" class="java.lang.String"/>
+	<field name="Mascota" class="java.lang.String"/>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="572" height="752" uuid="2bbe26a2-0de8-43d6-9b7b-3fb3d281fa75"/>
+				<imageExpression><![CDATA[$P{HojaMembretada}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="194" y="0" width="186" height="20" uuid="a1af6bcc-33e2-460e-97c4-acf32206bd80"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Atencion de Factura"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="29" y="2" width="61" height="20" uuid="655b0187-1044-47f5-b4d2-90aaa38e81b1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="2" width="143" height="20" uuid="7898ebc3-a24e-4dc3-b923-3be74c7b73b6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="3" width="113" height="20" uuid="a312853f-0088-48bc-aa2e-317cf52c5c59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="3" width="108" height="20" uuid="a1ecb37a-ae8b-4ba0-87e1-587d88dbe639"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mascota]]></text>
+			</staticText>
+			<line>
+				<reportElement x="24" y="22" width="523" height="1" uuid="38ef9199-4bc5-4332-b450-4487a02e13f8"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="0" width="61" height="20" uuid="b35243a8-2f96-481b-8ef8-25097e22b1d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoFactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="0" width="143" height="20" uuid="a4804888-e880-4437-96fe-05a1fa2feedd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Empleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="0" width="113" height="20" uuid="6119d85c-cdf4-4166-8a35-29b13139c557"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="108" height="20" uuid="3f461d13-e9c5-4ddd-a0c6-4f0fbf9a4d6d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Mascota}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="24" y="0" width="523" height="1" uuid="916608ce-71fc-4167-81e8-439165a6ad78"/>
+			</line>
+			<line>
+				<reportElement x="24" y="19" width="523" height="1" uuid="419644a0-a45e-413b-9fcd-9ec72fed616c"/>
+			</line>
+			<line>
+				<reportElement x="23" y="0" width="1" height="20" uuid="8fe48f54-bb77-4b41-a92b-dffbe061223e"/>
+			</line>
+			<line>
+				<reportElement x="101" y="0" width="1" height="20" uuid="da698432-31fe-46a2-8f53-ab571510505a"/>
+			</line>
+			<line>
+				<reportElement x="273" y="0" width="1" height="20" uuid="cef81a37-ba7f-4cc8-9609-6a3dcb09081d"/>
+			</line>
+			<line>
+				<reportElement x="413" y="0" width="1" height="20" uuid="5a875d74-0633-4faf-9104-1e5fb37ec807"/>
+			</line>
+			<line>
+				<reportElement x="547" y="0" width="1" height="20" uuid="cd02d2aa-b6be-468b-b0a9-6290b7d3fe3e"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

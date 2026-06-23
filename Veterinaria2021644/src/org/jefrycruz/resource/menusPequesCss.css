@@ -1,0 +1,61 @@
+/* Estilos base */
+.border-pequeno {
+    -fx-background-color: #6C9BCF;
+}
+
+.border-grande {
+    -fx-background-color: linear-gradient(to bottom, #A0D0E0, #B0D9E8);
+}
+
+/* Botones normales */
+.button {
+    -fx-padding: 12.5px 30px;
+    -fx-border-width: 0;
+    -fx-background-radius: 100px;
+    -fx-background-color: #6C9BCF;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.3), 3, 0.15, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #A0D0E0, #B0D9E8);
+    -fx-effect: dropshadow(gaussian, rgba(72, 138, 178, 0.3), 10, 0, 0, 0);
+    -fx-text-fill: #003366;
+}
+
+.button:pressed {
+    -fx-background-color: #5F94B6;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 2);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Botón Salir */
+
+.buttonSalir {
+    -fx-background-color: #6C9BCF;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-transition: -fx-background-color 0.3s, -fx-text-fill 0.3s;
+}
+
+.buttonSalir:hover {
+    -fx-background-color: #ff6e6b;
+    -fx-effect: dropshadow(gaussian, rgba(255,0,0,0.7), 15, 0.5, 0, 5);
+    -fx-translate-y: -3px;
+    -fx-text-fill: #FFDDDD;
+}
+
+.buttonSalir:pressed {
+    -fx-background-color: #be0a07;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.7), 10, 0, 0, 3);
+    -fx-translate-y: 2px;
+    -fx-text-fill: #FFAAAA;
+}
+

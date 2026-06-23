@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RecetaMacota" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c6a02b4c-7439-4763-9fe9-337196ae5b88">
+	<property name="ireport.zoom" value="0.826446280991736"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="183"/>
+	<queryString>
+		<![CDATA[call sp_RecetaMacota();]]>
+	</queryString>
+	<field name="Medicamento" class="java.lang.String"/>
+	<field name="Dosis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Duracion de las dosis" class="java.lang.Integer"/>
+	<field name="Nombre de la mascota" class="java.lang.String"/>
+	<background>
+		<band height="752" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="242" y="0" width="100" height="20" uuid="bd1658eb-f470-460d-9147-188e91ff661a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Receta de Mascota"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="143" height="20" uuid="342f2ccd-fbfb-4b0a-bb4c-6af57692cfe3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Medicamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="0" width="143" height="20" uuid="18b6a3db-446b-4176-aa82-e188423ef62c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Dosis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="0" width="143" height="20" uuid="7577de5a-f738-42c1-b9ce-c4a11edb4d50"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Duracion de las dosis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="0" width="143" height="20" uuid="b547b041-faa4-44f4-94e8-046b3546f345"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nombre de la mascota]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="143" height="20" uuid="3e7fe30a-b89d-477d-9e48-4d6b6c217573"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Medicamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="0" width="143" height="20" uuid="47418600-73e4-4ac1-becf-56af65c6709e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Dosis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="0" width="143" height="20" uuid="963822db-28ea-4d68-996e-3c5edfe0ecb3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Duracion de las dosis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="143" height="20" uuid="926b6b9b-933c-4547-b1bc-fd8d42cd1473"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Nombre de la mascota}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

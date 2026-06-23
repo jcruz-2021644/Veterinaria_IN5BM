@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteFacturaConSubReportes" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="861b90d5-4941-489b-97f8-043766f4f219">
+	<property name="ireport.zoom" value="0.9090909090909108"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="_codigoFactura" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\INFORMATICA\\Desktop\\Veterinaria2021644\\Veterinaria2021644\\src\\org\\jefrycruz\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="HojaMembretada" class="java.awt.Image"/>
+	<parameter name="SubReporteCliente" class="java.io.InputStream"/>
+	<parameter name="SubReporteEmpleado" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[call sp_BuscarFactura($P{_codigoFactura});]]>
+	</queryString>
+	<field name="codigoFactura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaEmision" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="metodoPago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="d2fd46c6-8e59-4e4d-b8e4-3a938020786d"/>
+				<imageExpression><![CDATA[$P{HojaMembretada}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="212" y="0" width="165" height="20" uuid="d7250fe9-dd16-4bcb-9b27-e1eff6b1cdd2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[FACTURA REALIZADA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="93" splitType="Stretch">
+			<textField>
+				<reportElement x="139" y="19" width="31" height="20" uuid="1f7de0ca-fa57-4b81-a4c4-8684df1ed861"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoFactura}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="181" y="44" width="100" height="20" uuid="096af0db-7fe7-41b9-9587-4c46b94d87fc"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaEmision}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="19" width="100" height="20" uuid="5168c334-efc7-4c4a-bb77-f7993e618fb3"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="44" width="100" height="20" uuid="1c07b8c3-625b-4e7b-9825-7e7acebf9e71"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{metodoPago}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="89" y="19" width="50" height="20" uuid="aa5c7686-28ec-4045-b905-a1b625a49dd4"/>
+				<text><![CDATA[Factura:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="44" width="92" height="20" uuid="f55195ca-5ba1-4053-a649-27404e8778e7"/>
+				<text><![CDATA[Fecha de Emision:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="19" width="35" height="20" uuid="052491ae-a927-4721-9dc6-643b906780f4"/>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="44" width="83" height="20" uuid="9e2e8732-246c-44f4-bea1-c00cbde93a15"/>
+				<text><![CDATA[Metodo de Pago:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="275" splitType="Stretch">
+			<subreport>
+				<reportElement x="-1" y="208" width="572" height="67" uuid="c9591a64-39e8-4be9-af0c-deb876748683"/>
+				<subreportParameter name="_codigoCliente">
+					<subreportParameterExpression><![CDATA[$P{_codigoFactura}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SubReporteCliente}]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="-1" y="0" width="572" height="70" uuid="7805a83f-fdc2-4cc9-bfd9-61699b098f08"/>
+				<subreportParameter name="_codigoEmpleado">
+					<subreportParameterExpression><![CDATA[$P{_codigoFactura}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SubReporteEmpleado}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

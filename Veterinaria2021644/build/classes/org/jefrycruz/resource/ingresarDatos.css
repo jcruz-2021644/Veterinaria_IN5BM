@@ -1,0 +1,121 @@
+/* Panel pequeño con degradado azul suave */
+.anchor-pane-pequeno {
+
+    -fx-background-color: linear-gradient(to bottom, #59cdff, #00BFFF);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+/* Panel grande con degradado azul más intenso */
+.anchor-pane-grande {
+    -fx-background-color: linear-gradient(to bottom, #B0E0E6, #87CEEB);
+   /* -fx-background-color: linear-gradient(to bottom, #A0D0E0, #B0D9E8);*/
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 2);
+}
+
+/* Botones */
+.btnIngresarDatos {
+    -fx-background-color: linear-gradient(to bottom, #59cdff, #00BFFF);
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 8px; /* Bordes redondeados */
+    -fx-border-radius: 8px; /* Bordes redondeados */
+    -fx-border-width: 2px;
+    -fx-border-color: #4682B4;
+    -fx-padding: 12px 24px;
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.5), 8, 0.3, 0, 2);
+    -fx-cursor: hand;
+}
+
+/* Efecto hover */
+.btnIngresarDatos:hover {
+    -fx-background-color: linear-gradient(to bottom, #1873CC, #0095DD);
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.7), 10, 0.4, 0, 3);
+    -fx-translate-y: -2px;
+}
+
+/* Efecto al presionar - animación de "click" */
+.btnIngresarDatos:pressed {
+    -fx-background-color: linear-gradient(to bottom, #005FCC, #0085CC);
+    -fx-effect: dropshadow(gaussian, rgba(0,95,204,0.5), 5, 0.2, 0, 1);
+    -fx-translate-y: 1px; /* Efecto de ser presionado hacia abajo */
+    -fx-scale-x: 0.98;   /* Ligera reducción de tamaño */
+    -fx-scale-y: 0.98;
+}
+
+/* Efecto después de soltar (puedes agregar animación adicional si quieres) */
+.btnIngresarDatos:released {
+    -fx-translate-y: 0px;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-background-color: linear-gradient(to bottom, #1E90FF, #00BFFF);
+}
+
+
+
+/*Boton salir*/
+.buttonSalir {
+    -fx-background-color: linear-gradient(to bottom, #59cdff, #00BFFF);
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #4682B4;
+    -fx-pref-width: 44px;
+    -fx-pref-height: 27px;
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.3), 3, 0.15, 0, 1);
+    -fx-cursor: hand;
+    -fx-padding: 0; 
+}
+
+/* Efecto hover */
+.buttonSalir:hover {
+    -fx-background-color: linear-gradient(to bottom, #1873CC, #0095DD);
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.6), 7, 0.3, 0, 2);
+    -fx-translate-y: -1px; /* Elevación más sutil */
+}
+
+/* Efecto al presionar */
+.buttonSalir:pressed {
+    -fx-background-color: linear-gradient(to bottom, #005FCC, #0085CC);
+    -fx-effect: dropshadow(gaussian, rgba(0,95,204,0.4), 3, 0.15, 0, 1);
+    -fx-translate-y: 1px;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Efecto después de soltar */
+.buttonSalir:released {
+    -fx-translate-y: 0px;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-background-color: linear-gradient(to bottom, #59cdff, #00BFFF);
+}
+
+
+
+/*los txt*/
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #A7D8E8;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 0.3em 0.7em;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3, 0.2, 0, 1);
+    -fx-transition: all 0.2s ease;
+}
+
+/* Efecto al pasar el mouse sobre los TextField */
+.text-field:hover {
+    -fx-translate-y: -3px;
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.3), 5, 0.3, 0, 2);
+    -fx-border-color: #1E90FF;
+    -fx-background-color: #F8FDFF;
+}
+
+/* Efecto cuando el TextField está enfocado */
+.text-field:focused {
+    -fx-border-color: #00BFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,191,255,0.4), 7, 0.4, 0, 3);
+}

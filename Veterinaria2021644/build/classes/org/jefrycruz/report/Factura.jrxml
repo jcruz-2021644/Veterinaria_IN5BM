@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a3ab51fd-1857-4b3a-a34d-25ec5ea1792d">
+	<property name="ireport.zoom" value="1.3310000000000046"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="144"/>
+	<queryString>
+		<![CDATA[call sp_FacturaAtencion();]]>
+	</queryString>
+	<field name="codigoFactura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Empleado" class="java.lang.String"/>
+	<field name="Cliente" class="java.lang.String"/>
+	<field name="Mascota" class="java.lang.String"/>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="fa45293e-5adb-48d0-b87f-9b31bd91c8e3"/>
+				<imageExpression><![CDATA["C:\\Users\\PC\\Desktop\\Veterinaria2021644\\Veterinaria2021644\\src\\org\\jefrycruz\\image\\Hoja Membretada  .jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="236" y="0" width="83" height="20" uuid="8e55aa96-9d7b-4c42-841b-428db0b208a3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Factura"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="0" width="74" height="20" uuid="09c98993-052d-40f8-86a2-0159796506ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[codigoFactura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="0" width="113" height="20" uuid="34ebfd41-d23b-4345-8deb-d27308d406d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="0" width="120" height="20" uuid="bd642409-0ff5-4610-b1c5-96fcf002ab9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="0" width="104" height="20" uuid="1ea15128-33bb-4bcd-b843-09b375907f19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mascota]]></text>
+			</staticText>
+			<line>
+				<reportElement x="34" y="20" width="477" height="1" uuid="acb298b4-a28f-4602-aa2d-e0d6f5c8813f"/>
+			</line>
+			<line>
+				<reportElement x="34" y="0" width="477" height="1" uuid="2af1146a-38cd-4aa9-a904-ddb9d6416dbc"/>
+			</line>
+			<line>
+				<reportElement x="511" y="1" width="1" height="19" uuid="88f798a4-4438-4209-b478-bfdaaf1617fc"/>
+			</line>
+			<line>
+				<reportElement x="33" y="1" width="1" height="19" uuid="4d17be40-7cba-48a4-86ca-2b68c06517f2"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="34" y="0" width="74" height="20" uuid="0a2565b5-5325-4cf1-9721-c3fbae71d643"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoFactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="0" width="113" height="20" uuid="c34a45e2-c81b-4dc6-875a-d40b0b5af418"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Empleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="0" width="120" height="20" uuid="3f6635f8-7194-4f5e-80eb-02adf3f94202"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="0" width="104" height="20" uuid="be9dc72c-3fb6-4b20-9328-88ce0332951c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Mascota}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="34" y="19" width="477" height="1" uuid="b528dc59-9894-4c6f-949d-0a3ea31ec6bb"/>
+			</line>
+			<line>
+				<reportElement x="510" y="0" width="1" height="19" uuid="d87d4bb3-7967-4897-8610-56ddf4584bff"/>
+			</line>
+			<line>
+				<reportElement x="34" y="0" width="1" height="19" uuid="ced7dbe5-0ade-410f-b8f4-bdc7fe4b8322"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

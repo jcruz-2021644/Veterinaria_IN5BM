@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@../resource/modiEliBusCrudCss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefrycruz.controller.VacunacionController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="border-grande" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="180.0" prefWidth="600.0" styleClass="border-pequeno">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#irMenuVacunacion" styleClass="buttonSalir">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/CasaIcono.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="645.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="634.0" text="INGRESAR EL ID DE LA VACUNACION A BUSCAR" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="-10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtBuscarVacunacion" alignment="CENTER" prefHeight="25.0" prefWidth="462.0" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#onBuscarVacunacion" prefHeight="33.0" prefWidth="111.0" styleClass="btn-Buscar" stylesheets="@../resource/modiEliBusCrudCss.css" text="Buscar">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="283.0" prefWidth="26.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="50.0" right="50.0" top="15.0" />
+               </VBox.margin>
+               <children>
+                  <TableView fx:id="tblVacunacionBuscar" prefHeight="310.0" prefWidth="500.0">
+                     <columns>
+                        <TableColumn fx:id="colcodigoVacunacionBuscar" prefWidth="43.0" text="ID" />
+                        <TableColumn fx:id="colfechaAplicacionBuscar" prefWidth="114.0" text="Fecha Aplicacion" />
+                        <TableColumn fx:id="colobservacionesBuscar" prefWidth="121.0" text="Observaciones" />
+                        <TableColumn fx:id="colcodigoMascotaBuscar" prefWidth="102.0" text="Codigo Mascota" />
+                        <TableColumn fx:id="colcodigoVacunaBuscar" prefWidth="97.0" text="Codigo Vacuna" />
+                        <TableColumn fx:id="colcodigoVeterinarioBuscar" prefWidth="121.0" text="Codigo Veterinario" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

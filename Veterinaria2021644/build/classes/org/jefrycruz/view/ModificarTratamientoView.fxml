@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="437.0" stylesheets="@../resource/modificarCrudCss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefrycruz.controller.TratamientoController">
+   <center>
+      <HBox alignment="CENTER" prefHeight="687.0" prefWidth="437.0" styleClass="anchor-pane-grande" stylesheets="@../resource/modificarCrudCss.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="635.0" prefWidth="387.0" styleClass="anchor-pane-pequeno" stylesheets="@../resource/modificarCrudCss.css">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </HBox.margin>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#irMenuTratamientoAdmin" styleClass="buttonSalir">
+                           <HBox.margin>
+                              <Insets left="-30.0" top="-153.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/CasaIcono.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <VBox prefHeight="139.0" prefWidth="291.0">
+                           <children>
+                              <ImageView fitHeight="119.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/TratamientoIcono.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="80.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="294.0" text="Modificar los datos del Tratamiento" textAlignment="CENTER">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="240.0" prefWidth="337.0" spacing="5.0">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" prefHeight="309.0" prefWidth="161.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" text="ID:">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Descripcion:">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Fecha Inicio:">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Fecha Fin:">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="90.0" text="Medicamentos Indicados:" textAlignment="RIGHT" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label alignment="TOP_LEFT" text="Codigo Consulta:">
+                                 <VBox.margin>
+                                    <Insets top="25.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="262.0" prefWidth="301.0" spacing="20.0">
+                           <children>
+                              <TextField fx:id="txtModificarCodigoTratamiento" promptText="1">
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </TextField>
+                              <TextField fx:id="txtModificarDescripcion" promptText="Aplicar solo si....">
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </TextField>
+                              <DatePicker fx:id="dpModificarFechaInicio" prefHeight="27.0" prefWidth="323.0" promptText="25-04-10" styleClass="datePicker" />
+                              <DatePicker fx:id="dpModificarFechaFin" prefHeight="27.0" prefWidth="323.0" promptText="25-04-20" styleClass="datePicker" />
+                              <TextField fx:id="txtModificarMedicamentosIndicados" promptText="Anti-Grip / Anti-Popo / etc...">
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </TextField>
+                              <TextField fx:id="txtModificarCodigoConsulta" promptText="1">
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="87.0" prefWidth="337.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onModificarTratamiento" styleClass="btnIngresarDatos" text="ModificarDatos" />
+                     </children>
+                  </HBox>
+                  <Label prefHeight="69.0" prefWidth="313.0" text="Nota: *Si solo quieres modificar solo un parametro tienes que volver a llenar todos los parametros*" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

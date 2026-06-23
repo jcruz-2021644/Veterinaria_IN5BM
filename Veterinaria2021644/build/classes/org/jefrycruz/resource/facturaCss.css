@@ -1,0 +1,5 @@
+.anchor-pane-grande {
+    -fx-background-color: linear-gradient(to bottom, #A0D0E0, #B0D9E8); 
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}

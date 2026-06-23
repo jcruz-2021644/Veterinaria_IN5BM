@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="845.0" stylesheets="@../resource/modiEliBusCrudCss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefrycruz.controller.ClienteController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="border-grande" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="180.0" prefWidth="600.0" styleClass="border-pequeno">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#irMenuCliente" styleClass="buttonSalir">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/CasaIcono.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="634.0" text="Ingresar su ID" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="-10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtBuscarClientes" prefHeight="25.0" prefWidth="462.0" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#onBuscarClientes" prefHeight="33.0" prefWidth="111.0" styleClass="btn-Buscar" stylesheets="@../resource/modiEliBusCrudCss.css" text="Buscar">
+                     <VBox.margin>
+                        <Insets left="370.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="283.0" prefWidth="26.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="50.0" right="50.0" top="15.0" />
+               </VBox.margin>
+               <children>
+                  <TableView fx:id="tblClientesBuscar" prefHeight="237.0" prefWidth="761.0">
+                     <columns>
+                        <TableColumn fx:id="colcodigoClienteBuscar" prefWidth="104.0" text="Codigo Cliente" />
+                        <TableColumn fx:id="colnombreClienteBuscar" prefWidth="105.0" text="Nombre Cliente" />
+                        <TableColumn fx:id="colapellidoClienteBuscar" prefWidth="113.0" text="Apellido Cliente" />
+                        <TableColumn fx:id="coltelefonoClienteBuscar" prefWidth="111.0" text="Telefono Cliente" />
+                        <TableColumn fx:id="coldireccionClienteBuscar" prefWidth="105.0" text="Direccion Cliente" />
+                        <TableColumn fx:id="colemailClienteBuscar" prefWidth="93.0" text="Email Cliente" />
+                        <TableColumn fx:id="colfechaRegistroBuscar" prefWidth="113.0" text="Fecha del Registro " />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

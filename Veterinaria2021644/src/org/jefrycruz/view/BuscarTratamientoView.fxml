@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../resource/modiEliBusCrudCss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefrycruz.controller.TratamientoController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="border-grande" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="180.0" prefWidth="600.0" styleClass="border-pequeno">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#irMenuTratamiento" styleClass="buttonSalir">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/CasaIcono.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="634.0" text="INGRESAR EL ID DEL TRATAMIENTO A BUSCAR" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="-10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtBuscarTratamiento" prefHeight="25.0" prefWidth="462.0" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#onBuscarTratamiento" prefHeight="33.0" prefWidth="111.0" styleClass="btn-Buscar" stylesheets="@../resource/modiEliBusCrudCss.css" text="Buscar">
+                     <VBox.margin>
+                        <Insets left="240.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="283.0" prefWidth="26.0">
+               <children>
+                  <TableView fx:id="tblTratamientoBuscar" prefHeight="310.0" prefWidth="500.0">
+                     <columns>
+                        <TableColumn fx:id="colcodigoTratamientoBuscar" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="coldescripcionBuscar" prefWidth="75.0" text="Descripcion" />
+                        <TableColumn fx:id="colfechaInicioBuscar" prefWidth="75.0" text="Fecha Inicio" />
+                        <TableColumn fx:id="colfechaFinBuscar" prefWidth="75.0" text="Fecha Fin" />
+                        <TableColumn fx:id="colmedicamentosIndicadosBuscar" prefWidth="92.0" text="Medicamentos" />
+                        <TableColumn fx:id="colcodigoConsultaBuscar" prefWidth="106.0" text="CodigoConsulta" />
+                     </columns>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="50.0" right="50.0" top="15.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

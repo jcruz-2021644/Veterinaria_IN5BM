@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefrycruz.controller.RegistroController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="361.0" prefWidth="310.0" styleClass="vbox-grande" stylesheets="@../resource/loginCss.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="310.0" VBox.vgrow="NEVER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onSalir" prefHeight="25.0" prefWidth="51.0" styleClass="btnSalir" text="Salir" HBox.hgrow="NEVER" />
+                  <Region prefHeight="50.0" prefWidth="197.0" />
+                  <Button mnemonicParsing="false" onAction="#irLogin" prefHeight="29.0" prefWidth="67.0" styleClass="btnSalir" text="Login" />
+               </children>
+            </HBox>
+            <ImageView fitHeight="139.0" fitWidth="171.0">
+               <image>
+                  <Image url="@../image/LogoVeterinaria.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="84.0" prefWidth="226.0" text="Bienvenido al registro de nuestra veterinaria" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Label>
+            <GridPane alignment="CENTER" hgap="10.0" prefHeight="107.0" prefWidth="310.0" vgap="10">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" minWidth="100" />
+                  <ColumnConstraints halignment="LEFT" minWidth="200" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints prefHeight="35" />
+                  <RowConstraints prefHeight="35" />
+                  <RowConstraints prefHeight="40" />
+               </rowConstraints>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label text="Usuario" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtIngresarUsuario" promptText="Ingrese su usuario" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <Label text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtIngresarContrasena" promptText="Ingrese su contraseña" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="96.0" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Button onAction="#onAgregarRegistro" prefHeight="26.0" prefWidth="170.0" styleClass="btnIngresarDatos" text="Ingresar" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Label alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" prefHeight="35.0" prefWidth="310.0" styleClass="border-abajo" stylesheets="@../resource/loginCss.css" text="© 2023 Veterinaria Jcruz - Derechos de Jefry 👻" />
+   </bottom>
+</BorderPane>

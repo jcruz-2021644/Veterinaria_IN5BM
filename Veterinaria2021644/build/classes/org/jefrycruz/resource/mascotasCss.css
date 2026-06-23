@@ -1,0 +1,76 @@
+/* Panel pequeño (barra lateral) */
+.anchor-pane-pequeno {
+    -fx-background-color: #6C9BCF; /* Azul más claro, pero con un toque vibrante */
+}
+
+/* Panel grande con degradado azul */
+.anchor-pane-grande {
+    -fx-background-color: linear-gradient(to bottom, #A0D0E0, #B0D9E8); /* Degradado de azul claro a celeste suave */
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+/* Botones */
+.button {
+    -fx-padding: 12.5px 30px;
+    -fx-border-width: 0;
+    -fx-background-radius: 100px;
+    -fx-background-color: #6C9BCF; /* Azul oscuro */
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: white; /* Color blanco para el texto */
+    -fx-transition-duration: 0.4s;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.3), 3, 0.15, 0, 1);
+    
+}
+
+/* Estado hover del botón */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #A0D0E0, #B0D9E8); 
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.6), 7, 0.3, 0, 2);
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+/* Estado presionado del botón */
+.button:pressed {
+    -fx-background-color: #5F94B6; /* Azul intermedio */
+    -fx-effect: null;
+    -fx-scale-x: 0.90;
+    -fx-scale-y: 0.90;
+    -fx-transition-duration: 0.25s;
+}
+
+
+
+/*Boton salir*/
+.buttonSalir {
+    -fx-background-color: #6C9BCF;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-pref-width: 44px;
+    -fx-pref-height: 27px;
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.3), 3, 0.15, 0, 1);
+    -fx-cursor: hand;
+    -fx-padding: 0; 
+}
+
+/* Efecto hover */
+.buttonSalir:hover {
+    -fx-background-color: linear-gradient(to bottom, #A0D0E0, #B0D9E8);
+    -fx-effect: dropshadow(gaussian, rgba(30,144,255,0.6), 7, 0.3, 0, 2);
+    -fx-translate-y: -1px; /* Elevación más sutil */
+}
+
+/* Efecto al presionar */
+.buttonSalir:pressed {
+    -fx-background-color: #5F94B6;
+    -fx-effect: dropshadow(gaussian, rgba(0,95,204,0.4), 3, 0.15, 0, 1);
+    -fx-translate-y: 1px;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+
